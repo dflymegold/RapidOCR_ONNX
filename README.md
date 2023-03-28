@@ -29,4 +29,4 @@ If the OpenCV and ONNXRuntime libraries were build with CUDA support - applicati
 
 ### Build
 ___
-In order to build the application use CMakelists.txt [will be provided with next commit]
+In order to build the application use CMakelists.txt
