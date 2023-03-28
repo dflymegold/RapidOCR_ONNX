@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 2.8)
+
+project( RapidOCR_ONNX )
+
+include_directories(include)
+set(GLOB SRC_SRC "source/*.cpp")
+add_executable (RapidOCR_ONNX  ${SRC_SRC})
+find_package(onnxruntime)
+find_package( OpenCV CONFIG REQUIRED)
+if( OpenCV_FOUND )
+  # Additional Include Directories
+  include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+  # Additional Library Directories
+  link_directories( ${OpenCV_LIB_DIR} )
+
+  # Additional Dependencies
+  target_link_libraries( giftoon ${OpenCV_LIBS} )
+endif()
